@@ -1,0 +1,18 @@
+version: '3'
+services:
+  time_distance_api:
+    build: ../time_distance_api
+    command: mix do deps.get, compile, run --no-halt
+    volumes:
+      - ../time_distance_api:/app
+    ports:
+      - "4000:4000"
+  charge_api:
+    build: .
+    command: mix do deps.get, compile, run --no-halt
+    volumes:
+      - .:/app
+    ports:
+      - "4001:4001"
+    depends_on:
+      - time_distance_api

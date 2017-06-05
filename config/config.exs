@@ -2,7 +2,7 @@ use Mix.Config
 
 config :charge_api,
   cowboy_port: 4001,
-  time_distance_api_endpoint: "http://localhost:4000/api/v1/get_time_distance"
+  time_distance_api_endpoint: "http://time_distance_api:4000/api/v1/get_time_distance"
 
 config :logger, level: :info
 

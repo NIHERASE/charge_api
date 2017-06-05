@@ -7,9 +7,9 @@ git clone git@github.com:NIHERASE/time_distance_api.git
 git clone git@github.com:NIHERASE/charge_api.git
 
 # You might need to set your api keys in ./time_distance_api/config/config.exs
-# ChargeApi will run on port 4001 by default and TimeDistanceApi will run on 4000
+# ChargeApi will be exposed on port 4001 and TimeDistanceApi on 4000.
 cd charge_api
-foreman start
+docker-compose up
 ```
 
 Test links for a route: [ChargeApi](http://localhost:4001/api/v1/get_charge?origin_lat=55.776451&origin_lon=37.655212&dest_lat=55.757399&dest_lon=37.660853),
