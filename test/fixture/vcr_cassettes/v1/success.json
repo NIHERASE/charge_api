@@ -1,0 +1,23 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4000/api/v1/get_time_distance?origin_lat=40&origin_lon=40.1&dest_lat=40&dest_lon=40.1"
+    },
+    "response": {
+      "body": "{\"duration\":0,\"distance\":0}",
+      "headers": {
+        "server": "Cowboy",
+        "date": "Tue, 06 Jun 2017 05:59:50 GMT",
+        "content-length": "27",
+        "cache-control": "max-age=0, private, must-revalidate"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

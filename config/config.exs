@@ -1,8 +1,9 @@
 use Mix.Config
 
+import_config "#{Mix.env}.exs"
+
 config :charge_api,
-  cowboy_port: 4001,
-  time_distance_api_endpoint: "http://time_distance_api:4000/api/v1/get_time_distance"
+  cowboy_port: 4001
 
 config :logger, level: :info
 
@@ -13,9 +14,3 @@ config :money,
   symbol: true,
   symbol_on_right: true,
   symbol_space: true
-
-config :charge_api, ChargeApi.ChargeResolver,
-  serving_charge: 150_00,
-  per_minute:     15_00,
-  per_km:         38_00,
-  min_charge:     300_00
